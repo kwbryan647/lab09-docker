@@ -41,7 +41,7 @@ jobs:
 
       - name: Update image tag in Kubernetes manifest
         run: |
-          FILE=k8s/hellodocker-deploy.yaml
+          FILE=k8/hellodocker-deploy.yaml
           OLD_IMAGE=${{ env.IMAGE_NAME }}:latest
           NEW_IMAGE=${{ env.IMAGE_NAME }}:${{ github.sha }}
           echo "START Updating $FILE with image $NEW_IMAGE in file $FILE"
