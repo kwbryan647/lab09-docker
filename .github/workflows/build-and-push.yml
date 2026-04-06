@@ -32,7 +32,7 @@ jobs:
         id: build_and_push
         uses: docker/build-push-action@v6
         with:
-          context: ./lab11-Docker
+          context: .
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
